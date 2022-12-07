@@ -1,70 +1,79 @@
- <html>
-<title>Aplikasi CRUD Sederhana</title>
+<!doctype html>
+<html lang="en">
+
 <head>
-<link rel="stylesheet" href="style/bootstrap.min.css" />
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="utils/style.css">
+	<link rel="stylesheet" href="utils/responsive.css">
+	<title>Aplikasi CRUD Sederhana</title>
 </head>
+
 <body>
-
-
-<?php
-	include"koneksi.php";
-	$no = 1;
-	$data = mysqli_query ($koneksi, " select 
-											id_mahasiswa,
-											nama,
-											jenis_kelamin,
-											telepon,
-											alamat
-									  from 
-									  mahasiswa 
-									  where id_mahasiswa = $_GET[id]");
-	$row = mysqli_fetch_array ($data);
-	
-?>
-<div class="container" style="margin-top:8%">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2"> 
-			<p>
-				<center>
-					<h2>Aplikasi Crud Sederhana</h2>
-					Oleh : <a href="https://www.smkhasankafrawi.web.id" target="_blank">SMK HK Keren</a>
-				</center>
-			</p>
-			<br>
-			<p>
-				<a class="btn btn-success" href="index.php">Kembali</a>
-			</p>
-			<table class="table table-stripped">
-				<tr>
-					<td style="width:10%;">
-						Nama 
-					</td>
-					<td>
-						: <?php echo $row['nama']; ?>
-					</td>
-				</tr>
-				<tr>					
-					<td>
-						Telepon
-					</td>
-					<td>
-						: <?php echo $row['telepon']; ?>
-					</td>
-				</tr>
-				<tr>		
-					<td>
-						Alamat
-					</td>
-					<td>
-						: <?php echo $row['alamat']; ?>
-					</td>
-				</tr>
-			</table>
+	<section id="topHeader" class="my-5 ">
+		<div>
+			<img src="images/logosi4.png" alt="" srcset="" class="logo">
 		</div>
+		<div class="header">
+			<h1>Data Mahasiswa Sistem Informasi 4</h1>
+		</div>
+		<div class="navigation ">
+			<a href="">Home</a>
+			<a href="">About</a>
+			<a href="">Journey</a>
+			<a href="">Member</a>
+			<a href="">Galery</a>
+			<a href="">Berita</a>
+		</div>
+	</section>
+	<?php
+	include "koneksi.php";
+
+	$no = 1;
+	$sql = "SELECT * FROM mahasiswa WHERE id_mahasiswa = $_GET[id] ";
+
+	$result_check = $connect->query($sql);
+	$row = mysqli_fetch_array($result_check)
+	?>
+	<div class="container w-50">
+		<p>
+			<a class="btn btn-success" href="home.php">Kembali</a>
+		</p>
+
+		<table class="table table-bordered table-hover table-responsive ">
+			<tr>
+				<td style="width:10%;">
+					Nama
+				</td>
+				<td>
+					<?php echo $row['nama']; ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Telepon
+				</td>
+				<td>
+					<?php echo $row['telepon']; ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Alamat
+				</td>
+				<td>
+					<?php echo $row['alamat']; ?>
+				</td>
+			</tr>
+
+		</table>
+
 	</div>
-	<p>
-	<center>Copyright @ 2019 by : <a href="https://www.smkhasankafrawi.web.id" target="_blank">SMK HK Keren</a> All rights reserved.</center>
-	</p>
-</div>
 </body>
+
 </html>

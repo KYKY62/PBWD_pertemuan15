@@ -1,14 +1,6 @@
 <?php
-$koneksi = mysqli_connect 
-			(
-				"localhost",
-				"root",
-				"",
-				"curddd"
-			);
-if (mysqli_connect_errno())
-	{
-		echo "Koneksi Gagal"
-		.mysqli_connect_error();
-	}
-?>
+$host = "localhost";
+$user = "root";
+$password = "";
+$database = "rizky_pbwd_quiz_genap";
+$connect = new mysqli($host, $user, $password, $database);

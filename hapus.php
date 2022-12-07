@@ -1,14 +1,10 @@
 <?php
-include"koneksi.php";
+include "koneksi.php";
 
+$id_mahasiswa = $_GET["id"];
 
-$query = "DELETE FROM mahasiswa 
-							WHERE id_mahasiswa ='$_GET[id]'
-								";
+$sql_check = "DELETE FROM mahasiswa WHERE id_mahasiswa= '$id_mahasiswa'";
 
-mysqli_query($koneksi, $query)
-or die ("Gagal Perintah SQL".mysql_error());
-header('location:index.php');
+$result_check = $connect->query($sql_check);
 
-?>
-
+header('location:home.php');

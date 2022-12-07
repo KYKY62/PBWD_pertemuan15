@@ -1,90 +1,51 @@
-<html>
-<title>Aplikasi CRUD Sederhana</title>
-<head>
-<link rel="stylesheet" href="style/bootstrap.min.css" />
-</head>
-<body>
+<!DOCTYPE HTML>
+<html lang="en">
 
-<div class="container" style="margin-top:8%">
-	<div class="row">
-		<div class="col-md-8 col-md-offset-2"> 
-			<p>
-				<center>
-					<h2>Aplikasi Crud Sederhana</h2>
-					Oleh : <a href="https://www.smkhasankafrawi.web.id" target="_blank">SMK HK Keren</a>
-				</center>
-			</p>
-			<br>
-			<p>
-				<a class="btn btn-primary" href="tambah.php">Tambah</a>
-			</p>
-			<table class="table table-bordered">
-				<tr>
-					<th>
-						No 
-					</th>
-					<th>
-						Nama 
-					</th>
-					<th>
-						Jenis Kelamin
-					</th>
-					<th>
-						Telepon
-					</th>
-					<th>
-						Alamat
-					</th>
-					<th>
-						Opsi
-					</th>
-				</tr>
-					<?php
-						include"koneksi.php";
-						$no = 1;
-						$data = mysqli_query ($koneksi, " select 
-																id_mahasiswa,
-																nama,
-																jenis_kelamin,
-																telepon,
-																alamat
-														  from 
-														  mahasiswa 
-														  order by id_mahasiswa DESC");
-						while ($row = mysqli_fetch_array ($data))
-						{
-					?>
-				<tr>
-					<td>
-						<?php echo $no++; ?>
-					</td>
-					<td>
-						<?php echo $row['nama']; ?>
-					</td>
-					<td>
-						<?php echo $row['jenis_kelamin']; ?>
-					</td>
-					<td>
-						<?php echo $row['telepon']; ?>
-					</td>
-					<td>
-						<?php echo $row['alamat']; ?>
-					</td>
-					<td>
-						<a href="detail.php?id=<?php echo $row['id_mahasiswa']; ?>">Detail</a> |
-						<a href="edit.php?id=<?php echo $row['id_mahasiswa']; ?>">Edit</a> |
-						<a href="hapus.php?id=<?php echo $row['id_mahasiswa']; ?>">Hapus</a>
-					</td>
-				</tr>
-				<?php
-					}
-				?>
-			</table>
-		</div>
-	</div>
-	<p>
-	<center>Copyright @ 2019 by : <a href="https://www.smkhasankafrawi.web.id" target="_blank">SMK HK Keren</a> All rights reserved.</center>
-	</p>
-</div>
+<head>
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+</head>
+
+<body class="body">
+
+    <div class="login-page">
+        <div class="form">
+
+            <form method="POST" action="login.php">
+                <lottie-player src="https://assets9.lottiefiles.com/private_files/lf30_m6j5igxb.json" style="justify-content: center;" loop autoplay></lottie-player>
+                <input type="text" placeholder="&#xf007;  username" class="form-control" name="username" />
+                <input type="password" id="password" placeholder="&#xf023;  password" class="form-control" name="password" />
+                <i class="fas fa-eye" onclick="show()"></i>
+                <br>
+                <br>
+                <button type="submit">LOGIN</button>
+                <a href="home.php" class="btn btn-success pull-right" <p class="message"></p>
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        function show() {
+            var password = document.getElementById("password");
+            var icon = document.querySelector(".fas")
+
+            // ========== Checking type of password ===========
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        };
+    </script>
+
 </body>
+
 </html>

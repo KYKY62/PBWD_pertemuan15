@@ -1,0 +1,133 @@
+/* Responsive Laptop */
+@media screen and (min-width : 1280px) {
+    /* TopHeader */
+
+    .header h1 {
+        font-size: 40px;
+    }
+
+
+    .navigation a {
+        font-size: 20px;
+    }
+
+    /* Akhir TopHeader */
+    /* Main Content */
+
+    .main {
+        padding: 0 10px;
+
+    }
+
+    .teks h1 {
+        font-size: 30px;
+    }
+
+    .teks p {
+        font-size: 20px;
+    }
+
+    .teks h3 {
+        font-size: 25px;
+    }
+
+    .teks button {
+        font-size: 20px;
+    }
+
+    .main_pengaduan h1 {
+        font-size: 32px;
+    }
+
+    .main_pengaduan h4 {
+        font-size: 16px;
+    }
+
+    .main_pengaduan a p {
+        font-size: 14px;
+    }
+
+    /* Akhir Main Content */
+
+    /* SideBar */
+
+    .sidebarCxt p {
+        font-size: 30px;
+    }
+
+    .sidebarCxt a p {
+        font-size: 25px;
+    }
+
+    /* Akhir SideBar */
+
+    /* Footer */
+
+    .footer-section .footer-left img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .footer-left h3 {
+        font-size: 30px;
+    }
+
+    .footer-section .footer-company-name {
+        font-size: 18px;
+
+    }
+
+    .footer-section .footer-right p {
+        font-size: 25px;
+    }
+
+    .footer-section .footer-right p span {
+        font-size: 25px;
+    }
+
+    .footer-right .email p a {
+        font-size: 25px;
+    }
+
+    /* Akhir Footer */
+
+}
+
+/* Akhir Responsive Laptop */
+
+/* Responsive Handphone ukuran Sedang */
+@media screen and (max-width : 391px) {
+    /* Main Content */
+
+    .teks h1 {
+        font-size: 20px;
+    }
+
+    .teks p {
+        font-size: 14px;
+    }
+
+    .teks h3 {
+        font-size: 20px;
+    }
+
+    .teks button {
+        width: 80%;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Akhir Main Content */
+
+}
+
+/* Akhir Responsive Handphone ukuran Sedang */
+
+/* Responsive Handphone ukuran Sedang */
+@media screen and (max-width : 375px) {
+    .sidebar {
+        margin: 20px 0 0 0;
+    }
+}
+
+/* Akhir Responsive Handphone ukuran Sedang */

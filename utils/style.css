@@ -1,0 +1,258 @@
+/* TopHeader */
+#topHeader {
+    height: 120px;
+
+}
+
+.logo {
+    width: 100px;
+    height: max-content;
+    margin: 0 10px;
+    float: left;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.navigation {
+    text-align: center;
+    display: flex;
+    display: block;
+    overflow: hidden;
+}
+
+.navigation a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: black;
+}
+
+.navigation a:hover {
+    color: #0956db;
+}
+
+/* Akhir TopHeader */
+
+/* Main Content */
+
+.main {
+    width: 100%;
+    height: max-content;
+    margin: 10px auto;
+    float: left;
+    display: flex;
+}
+
+.teks {
+    padding: 0 5px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.teks h1 {
+    font-size: 20px;
+    color: #0956db;
+    text-align: center;
+    font-weight: bold;
+}
+
+.teks h3 {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.teks img {
+    width: 90%;
+    /*todo Mengatur posisi gambar ditengah  */
+    display: block;
+    margin: auto;
+}
+
+.teks button {
+    width: 70%;
+    padding: 15px;
+    color: #209DD8;
+    font-weight: bold;
+    border-radius: 20px;
+    border-color: #209DD8;
+    margin-bottom: 20px;
+}
+
+.teks button:hover {
+    background-color: #055276;
+    color: white;
+}
+
+.main_pengaduan {
+    width: 100%;
+    height: max-content;
+    padding: 0 5px;
+    margin: 10% 5% 0 0;
+    float: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_pengaduan h1 {
+    font-size: 18px;
+    color: #0956db;
+}
+
+.main_pengaduan h4 {
+    font-size: 11px;
+    margin-top: 0;
+}
+
+.main_pengaduan a {
+    text-decoration: none;
+}
+
+.main_pengaduan a p {
+    font-size: 12px;
+}
+
+.garis_pengaduan {
+    width: 100%;
+    height: 5px;
+    background-color: #055276;
+}
+
+.btn-layanan {
+    color: #209DD8;
+    border-color: #209DD8;
+    width: 50%;
+    margin: 20px 25%;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.btn-layanan:hover {
+    background-color: #055276;
+    color: white;
+}
+
+
+/* Akhir Main Content */
+
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    margin: 30px 0 0 0;
+    box-shadow: 2px 2px 2px 2px grey;
+    height: max-content;
+    float: left;
+    display: flex;
+    justify-content: center;
+    border: 2px solid #F9F2ED;
+}
+
+.footer-section {
+    background-color: #FEFBF6;
+    box-sizing: border-box;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 10px 20px 20px 10px;
+}
+
+.footer-section .footer-left,
+.footer-section .footer-right,
+.footer-section .footer-right {
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Akhir Footer */
+
+
+/* Footer left */
+
+.footer-section .footer-left {
+    width: 50%;
+}
+
+.footer-left h3 {
+    font-weight: bold;
+    font: normal 18px 'Cookie', cursive;
+    margin: 0;
+}
+
+
+.footer-section .footer-left img {
+    width: 57px;
+    height: 57px;
+}
+
+.footer-section h3 {
+    color: #e0ac1c;
+}
+
+
+.footer-section .footer-company-name {
+    color: #8f9296;
+    font-size: 12px;
+    font-weight: normal;
+    margin-top: 30px;
+}
+
+.footer-company-name span {
+    color: #e0ac1c;
+    font-weight: bold;
+}
+
+.footer-section .footer-left {
+    width: 50%;
+}
+
+/* Akhir Footer Left */
+
+/* Footer Right */
+
+.footer-section .footer-right {
+    width: 50%;
+}
+
+.footer-section .footer-right p {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.footer-section .footer-right p span {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-right .telp p {
+    margin: 10px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.footer-right .telp p span {
+    font-weight: bold;
+}
+
+.footer-right .email p a {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+
+.footer-right .email a span {
+    font-weight: bold;
+}
+
+.footer-right .email p {
+    margin: 10px;
+    font-size: 12px;
+}
+
+/* Akhir Footer Right */
