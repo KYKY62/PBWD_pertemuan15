@@ -1,18 +1,14 @@
 <?php
 include "koneksi.php";
 
-$id = $_POST['id_mahasiswa'];
-$nama = $_POST['nama'];
-$jenis_kelamin = $_POST['jenis_kelamin'];
-$alamat = $_POST['alamat'];
-$telepon = $_POST['telepon'];
+$id = $_POST['cat_id'];
+$nama = $_POST['cat_name'];
+$telepon = $_POST['cat_text'];
 
-$sql = "UPDATE mahasiswa SET 
-            nama = '$nama',
-			jenis_kelamin = '$jenis_kelamin',
-			alamat = '$alamat',
-			telepon = '$telepon'
-			WHERE id_mahasiswa = '$id'";
+$sql = "UPDATE tb_category SET 
+            cat_name = '$nama',
+			cat_text = '$telepon'
+			WHERE cat_id = '$id'";
 
 $result = $connect->query($sql);
 

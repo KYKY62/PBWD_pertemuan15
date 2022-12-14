@@ -2,5 +2,5 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$database = "rizky_pbwd_quiz_genap";
+$database = "pertemuan15";
 $connect = new mysqli($host, $user, $password, $database);

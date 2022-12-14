@@ -34,29 +34,12 @@
     <div class="container">
         <form role="form" method="POST" action="input.php" class="w-50 m-auto">
             <div class="form-check">
-                <label>Nama</label>
-                <input class="form-control" name="nama">
+                <label>Category Name</label>
+                <input class="form-control" name="cat_name">
             </div>
             <div class="form-check">
-                <label>Jenis Kelamin</label>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="jenis_kelamin" value="Laki-laki" checked>Laki-laki
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="jenis_kelamin" value="Perempuan">Perempuan
-                    </label>
-                </div>
-            </div>
-            <div class="form-check">
-                <label>Telepon</label>
-                <input class="form-control" name="telepon">
-            </div>
-            <div class="form-check">
-                <label>Alamat</label>
-                <textarea name="alamat" class="form-control" rows="3"></textarea>
+                <label>Category Text</label>
+                <input class="form-control" name="cat_text">
             </div>
             <div class="form-check">
                 <button type="submit" class="btn btn-success pull-right mt-3 me-3">Simpan</button>

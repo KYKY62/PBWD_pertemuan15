@@ -40,19 +40,13 @@
 				<table class="table table-bordered table-hover table-responsive">
 					<tr>
 						<th>
-							ID Mahasiswa
+							Category ID
 						</th>
 						<th>
-							Nama
+							Category Name
 						</th>
 						<th>
-							Jenis Kelamin
-						</th>
-						<th>
-							Telepon
-						</th>
-						<th>
-							Alamat
+							Category Text
 						</th>
 						<th>
 							Opsi
@@ -62,31 +56,25 @@
 
 					include "koneksi.php";
 
-					$sql_check = "SELECT id_mahasiswa, nama, jenis_kelamin,telepon, alamat FROM  mahasiswa ORDER BY id_mahasiswa ASC";
+					$sql_check = "SELECT cat_id, cat_name, cat_text FROM  tb_category ORDER BY cat_id ASC";
 
 					$result_check = $connect->query($sql_check);
 					while ($row = mysqli_fetch_array($result_check)) {
 					?>
 						<tr>
 							<td>
-								<?php echo $row['id_mahasiswa']; ?>
+								<?php echo $row['cat_id']; ?>
 							</td>
 							<td>
-								<?php echo $row['nama']; ?>
+								<?php echo $row['cat_name']; ?>
 							</td>
 							<td>
-								<?php echo $row['jenis_kelamin']; ?>
+								<?php echo $row['cat_text']; ?>
 							</td>
 							<td>
-								<?php echo $row['telepon']; ?>
-							</td>
-							<td>
-								<?php echo $row['alamat']; ?>
-							</td>
-							<td>
-								<a class="btn btn-success ms-2 me-2" href="detail.php?id=<?php echo $row['id_mahasiswa']; ?>">Detail</a>
-								<a class="btn btn-success  me-2" href="edit.php?id=<?php echo $row['id_mahasiswa']; ?>">Edit</a>
-								<a class="btn btn-danger" href="hapus.php?id=<?php echo $row['id_mahasiswa']; ?>">Hapus</a>
+								<a class="btn btn-success ms-2 me-2" href="detail.php?id=<?php echo $row['cat_id']; ?>">Detail</a>
+								<a class="btn btn-success  me-2" href="edit.php?id=<?php echo $row['cat_id']; ?>">Edit</a>
+								<a class="btn btn-danger" href="hapus.php?id=<?php echo $row['cat_id']; ?>">Hapus</a>
 							</td>
 						</tr>
 					<?php

@@ -34,7 +34,7 @@
     <?php
     include 'koneksi.php';
     $no = 1;
-    $sql = "SELECT * FROM mahasiswa WHERE id_mahasiswa = $_GET[id] ";
+    $sql = "SELECT * FROM tb_category WHERE cat_id = $_GET[id] ";
     $result_check = $connect->query($sql);
     $row = mysqli_fetch_array($result_check)
 
@@ -42,30 +42,13 @@
     <div class="container">
         <form role="form" method="post" action="update.php" class="w-50 m-auto">
             <div class="form-check">
-                <label>Nama</label>
-                <input type="hidden" name="id_mahasiswa" value="<?php echo $row['id_mahasiswa']; ?>">
-                <input class="form-control" name="nama" value="<?php echo $row['nama']; ?>">
+                <label>Kategory Nama</label>
+                <input type="hidden" name="cat_id" value="<?php echo $row['cat_id']; ?>">
+                <input class="form-control" name="cat_name" value="<?php echo $row['cat_name']; ?>">
             </div>
             <div class="form-check">
-                <label>Jenis Kelamin</label>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="jenis_kelamin" value="Laki-laki" <?php if ($row['jenis_kelamin'] == 'Laki-laki') { ?> checked <?php } ?>>Laki-laki
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="jenis_kelamin" value="Perempuan" <?php if ($row['jenis_kelamin'] == 'Perempuan') { ?> checked <?php } ?>>Perempuan
-                    </label>
-                </div>
-            </div>
-            <div class="form-check">
-                <label>Telepon</label>
-                <input class="form-control" name="telepon" value="<?php echo $row['telepon']; ?>">
-            </div>
-            <div class="form-check">
-                <label>Alamat</label>
-                <textarea name="alamat" class="form-control" rows="3"><?php echo $row['alamat']; ?></textarea>
+                <label>Kategory Text</label>
+                <input class="form-control" name="cat_text" value="<?php echo $row['cat_text']; ?>">
             </div>
             <div class="form-check">
                 <button type="submit" class="btn btn-success pull-right mt-3 me-3">Simpan</button>

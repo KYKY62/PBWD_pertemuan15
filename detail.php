@@ -35,7 +35,7 @@
 	include "koneksi.php";
 
 	$no = 1;
-	$sql = "SELECT * FROM mahasiswa WHERE id_mahasiswa = $_GET[id] ";
+	$sql = "SELECT * FROM tb_category WHERE cat_id = $_GET[id] ";
 
 	$result_check = $connect->query($sql);
 	$row = mysqli_fetch_array($result_check)
@@ -48,26 +48,26 @@
 		<table class="table table-bordered table-hover table-responsive ">
 			<tr>
 				<td style="width:10%;">
-					Nama
+					Category ID
 				</td>
 				<td>
-					<?php echo $row['nama']; ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					Telepon
-				</td>
-				<td>
-					<?php echo $row['telepon']; ?>
+					<?php echo $row['cat_id']; ?>
 				</td>
 			</tr>
 			<tr>
 				<td>
-					Alamat
+					Category Name
 				</td>
 				<td>
-					<?php echo $row['alamat']; ?>
+					<?php echo $row['cat_name']; ?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Category Text
+				</td>
+				<td>
+					<?php echo $row['cat_text']; ?>
 				</td>
 			</tr>
 
