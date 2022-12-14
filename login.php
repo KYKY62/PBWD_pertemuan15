@@ -12,8 +12,11 @@ $sql = "SELECT * FROM user
 $result = $connect->query($sql);
 $row = mysqli_fetch_assoc($result);
 
-if ($username == $row['username'] && $password == $row['password']) {
-        header('location:home.php');
+
+if ($row > 1) {
+        if ($username == $row['username'] && $password == $row['password']) {
+                header('location:home.php');
+        }
 } else {
         header('location:index.php');
 }
